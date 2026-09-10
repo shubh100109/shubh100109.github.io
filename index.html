@@ -1,232 +1,1007 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Prelude — We Shape Your Brand</title>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikshara™ | Pure Handloom Sarees & Designer 3-Piece Suits | ikshara.co.nz</title>
+  <meta name="description" content="Shop luxury Indian Sarees and Designer 3-Piece Suits at ikshara.co.nz. Worldwide express shipping to New Zealand, Australia, USA, UK, Canada, UAE and 80+ countries. Direct WhatsApp ordering & custom stitching.">
+  
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            gold: {
+              300: '#E5C378',
+              400: '#D4AF37',
+              500: '#C5A059',
+              600: '#A17C38',
+              700: '#7E5E23',
+            },
+            regal: {
+              emerald: '#1B3B36',
+              maroon: '#4A1525',
+              wine: '#380E1C',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#FAF8F5] text-stone-900 selection:bg-amber-100 selection:text-amber-900 antialiased">
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Page loader (spinner) -->
-    <div id="page-loader" class="loader-overlay">
-      <div class="spinner"></div>
-      <div class="loader-text">Loading Prelude...</div>
+  <!-- ================= TOP ANNOUNCEMENT MARQUEE ================= -->
+  <div class="bg-stone-900 text-stone-200 text-xs py-2 px-4 border-b border-amber-900/30 overflow-hidden relative z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Scrolling Announcement for Worldwide Shoppers -->
+      <div class="flex items-center gap-6 overflow-hidden whitespace-nowrap w-full md:w-auto">
+        <div class="flex items-center gap-6 animate-marquee text-[11px] md:text-xs">
+          <span class="flex items-center gap-1.5 font-medium text-amber-300">
+            <span>✈️</span> Express Worldwide Shipping (USA, UK, Canada, Australia, UAE & 80+ Countries)
+          </span>
+          <span class="text-stone-600">•</span>
+          <span class="flex items-center gap-1.5">
+            <span>🪡</span> Custom Blouse & Suit Tailoring Available
+          </span>
+          <span class="text-stone-600">•</span>
+          <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+            <span>💬</span> Direct WhatsApp Orders & Video Call: +91 81403 07529
+          </span>
+          <span class="text-stone-600">•</span>
+          <span class="flex items-center gap-1.5">
+            <span>💯</span> 100% Pure Handloom & Authentic Fabrics
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick Contact in Announcement Bar -->
+      <div class="hidden md:flex items-center gap-4 text-[11px] flex-shrink-0 text-stone-300">
+        <a href="https://wa.me/918140307529?text=Hello%20Ikshara%E2%84%A2%20(ikshara.co.nz)!%20I%20need%20assistance%20with%20an%20order." target="_blank" class="hover:text-emerald-400 flex items-center gap-1 transition-colors">
+          <svg class="w-3.5 h-3.5 fill-current text-emerald-400" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          WhatsApp: +91 8140307529
+        </a>
+        <span class="text-stone-700">|</span>
+        <button id="openSizeGuideBtn" class="hover:text-amber-300 transition-colors">
+          📏 Sizing & Custom Fit Guide
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= STICKY MAIN HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/80 transition-all shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5">
+      <div class="flex items-center justify-between gap-4">
+        
+        <!-- BRAND LOGO -->
+        <div class="flex items-center gap-3">
+          <a href="#" class="group block">
+            <div class="flex flex-col">
+              <span class="font-serif text-2xl sm:text-3xl font-extrabold tracking-wider text-stone-900 group-hover:text-amber-800 transition-colors leading-none flex items-center">
+                IKSHARA<sup class="text-xs font-sans text-amber-700 font-bold ml-0.5">TM</sup>
+              </span>
+              <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-[0.25em] text-amber-700/90 group-hover:text-stone-900 transition-colors mt-0.5">
+                ikshara.co.nz • Sarees & Suits
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- SEARCH BAR (Myntra/Amazon Live Search Style) -->
+        <div class="flex-1 max-w-xl hidden md:block relative" id="searchContainer">
+          <div class="relative flex items-center">
+            <input 
+              type="text" 
+              id="searchInput"
+              placeholder="Search Kanjivaram silk, Banarasi, Pakistani 3-piece suits, organza..." 
+              class="w-full pl-10 pr-10 py-2.5 bg-stone-50 hover:bg-stone-100/80 focus:bg-white text-xs sm:text-sm text-stone-900 rounded-full border border-stone-200 transition-all placeholder:text-stone-400"
+            >
+            <div class="absolute left-3.5 text-stone-400 pointer-events-none">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+          </div>
+
+          <!-- Live Search Results Dropdown -->
+          <div id="searchResultsDropdown" class="hidden absolute left-0 right-0 top-full mt-1 bg-white rounded-xl shadow-2xl border border-stone-200 overflow-hidden z-50 max-h-80 overflow-y-auto"></div>
+        </div>
+
+        <!-- RIGHT UTILITIES: CURRENCY SELECTOR, WISHLIST, BAG, WHATSAPP -->
+        <div class="flex items-center gap-2 sm:gap-4">
+          
+          <!-- Worldwide Currency Selector -->
+          <div class="relative flex items-center bg-stone-100/90 rounded-lg p-0.5 border border-stone-200">
+            <span class="text-[11px] text-stone-500 pl-2 pr-1 hidden sm:inline">🌍</span>
+            <select id="currencySelector" class="bg-transparent text-xs font-bold text-stone-800 py-1.5 pr-2 pl-1 rounded focus:outline-none cursor-pointer">
+              <!-- populated dynamically -->
+            </select>
+          </div>
+
+          <!-- Wishlist Toggle -->
+          <button id="wishlistButton" class="relative p-2 text-stone-700 hover:text-red-600 hover:bg-stone-100 rounded-full transition-colors" title="Saved Wishlist">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            <span id="wishlistBadge" class="hidden absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-600 text-white text-[10px] font-bold flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Shopping Bag Drawer Toggle -->
+          <button id="cartButton" class="relative p-2 text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded-full transition-colors" title="View Shopping Bag">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span id="cartBadge" class="hidden absolute -top-1 -right-1 w-4 h-4 rounded-full bg-stone-900 text-amber-300 text-[10px] font-bold flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Direct Admin WhatsApp Order Button in Header (Admin: 8140307529) -->
+          <a 
+            href="https://wa.me/918140307529?text=Hello%20Ikshara%E2%84%A2%20(ikshara.co.nz)!%20I%20am%20interested%20in%20ordering%20Sarees%20and%20Suits." 
+            target="_blank" 
+            class="hidden lg:flex items-center gap-2 px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-lg shadow transition-all hover:scale-102">
+            <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp Admin</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Mobile Search Input Bar -->
+      <div class="mt-2.5 md:hidden">
+        <div class="relative flex items-center">
+          <input 
+            type="text" 
+            id="mobileSearchInput"
+            placeholder="Search sarees, 3-piece suits, silk..." 
+            class="w-full pl-9 pr-4 py-2 bg-stone-100 focus:bg-white text-xs text-stone-900 rounded-lg border border-stone-200 placeholder:text-stone-400"
+          >
+          <div class="absolute left-3 text-stone-400 pointer-events-none">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= HORIZONTAL CATEGORY STORY PILLS (IMMEDIATE ACCESS) ================= -->
+  <!-- Direct instant entry like Myntra and Amazon: Category chips right at top! -->
+  <section class="bg-white border-b border-stone-200/90 py-2.5 px-4 sticky top-[68px] sm:top-[73px] z-30 shadow-xs">
+    <div class="max-w-7xl mx-auto flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+      
+      <button class="category-pill active flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-stone-900 text-white flex-shrink-0 transition-all" data-category="all">
+        <span>✨</span> All Products
+      </button>
+
+      <button class="category-pill flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-stone-100 hover:bg-stone-200 text-stone-800 flex-shrink-0 transition-all" data-category="saree">
+        <span>🥻</span> Pure Silk Sarees
+      </button>
+
+      <button class="category-pill flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-stone-100 hover:bg-stone-200 text-stone-800 flex-shrink-0 transition-all" data-category="suit">
+        <span>👗</span> Designer 3-Piece Suits
+      </button>
+
+      <button class="category-pill flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-stone-100 hover:bg-stone-200 text-stone-800 flex-shrink-0 transition-all" data-category="saree" data-subcategory="kanjivaram">
+        <span>👑</span> Kanjivaram Heritage
+      </button>
+
+      <button class="category-pill flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-stone-100 hover:bg-stone-200 text-stone-800 flex-shrink-0 transition-all" data-category="suit" data-subcategory="pakistani-suit">
+        <span>💎</span> Pakistani Luxury Suits
+      </button>
+
+      <button class="category-pill flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-stone-100 hover:bg-stone-200 text-stone-800 flex-shrink-0 transition-all" data-category="saree" data-subcategory="banarasi">
+        <span>⚜️</span> Banarasi Brocade
+      </button>
+
+      <button class="category-pill flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-stone-100 hover:bg-stone-200 text-stone-800 flex-shrink-0 transition-all" data-category="suit" data-subcategory="anarkali">
+        <span>💃</span> Grand Anarkali Sets
+      </button>
+
+      <button class="category-pill flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-stone-100 hover:bg-stone-200 text-stone-800 flex-shrink-0 transition-all" data-category="saree" data-subcategory="organza">
+        <span>🌸</span> Organza & Chiffon
+      </button>
+
+      <button class="category-pill flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-stone-100 hover:bg-stone-200 text-stone-800 flex-shrink-0 transition-all" data-category="suit" data-subcategory="sharara-suit">
+        <span>✨</span> Sharara 3-Piece
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ================= COMPACT HERO PROMO STRIP (HIGH CONVERSION) ================= -->
+  <section class="bg-gradient-to-r from-stone-900 via-regal-emerald to-stone-900 text-white py-6 px-4 border-b border-amber-900/40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 text-[10px] font-bold uppercase tracking-wider mb-1.5">
+          <span>🌍 Worldwide Selling Portal</span>
+          <span>•</span>
+          <span>WhatsApp Verified</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-white tracking-wide">
+          Handcrafted Luxury Sarees & Designer 3-Piece Suits
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-300 mt-1 max-w-2xl leading-relaxed">
+          Pure Kanjivaram, Banarasi Silk, Pakistani Luxury Suits & Anarkalis. Direct doorstep shipping to USA, UK, Canada, UAE, Australia & Worldwide with master custom stitching.
+        </p>
+      </div>
+
+      <!-- Quick Action Badges -->
+      <div class="flex items-center gap-2.5 flex-wrap flex-shrink-0">
+        <a href="#productsSection" class="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-stone-900 text-xs font-bold uppercase tracking-wider rounded-lg shadow-md transition-all">
+          Explore All Designs ↓
+        </a>
+        <a href="https://wa.me/918140307529?text=Hello%20Ikshara%E2%84%A2%20(ikshara.co.nz)!%20I%20would%20like%20to%20request%20a%20Video%20Call%20for%20Saree%20Selection." target="_blank" class="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-xs font-semibold rounded-lg border border-white/20 flex items-center gap-1.5 transition-all">
+          <span>📹</span> Video Call Selection
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN PRODUCTS SECTION (IMMEDIATELY AFTER ENTRY) ================= -->
+  <main id="productsSection" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    
+    <!-- Top Filter Bar & Controls (Myntra / Amazon Style) -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-stone-200/90 mb-6">
+      
+      <!-- Counter & Active Filters Display -->
+      <div class="flex items-center gap-3">
+        <button id="openMobileFilters" class="lg:hidden flex items-center gap-2 px-3 py-2 bg-stone-900 text-white text-xs font-bold rounded-lg shadow">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/></svg>
+          Filters & Sort
+        </button>
+        <span id="productCountBadge" class="text-xs sm:text-sm font-bold text-stone-800 uppercase tracking-wider">
+          Loading Designs...
+        </span>
+        <span class="text-stone-300 hidden sm:inline">|</span>
+        <span class="text-xs text-stone-500 hidden sm:inline">
+          Order via WhatsApp to Admin <strong class="text-stone-900">+91 81403 07529</strong>
+        </span>
+      </div>
+
+      <!-- Sort & Currency Utilities -->
+      <div class="flex items-center gap-3 self-end sm:self-auto">
+        <label for="sortSelect" class="text-xs text-stone-500 hidden sm:inline font-medium">Sort By:</label>
+        <select id="sortSelect" class="bg-white border border-stone-200 text-xs font-bold text-stone-800 rounded-lg py-2 px-3 focus:outline-none focus:border-amber-700 cursor-pointer shadow-2xs">
+          <option value="featured">Featured / Best Sellers</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Highest Customer Rating</option>
+          <option value="newest">New Arrivals</option>
+        </select>
+      </div>
+
     </div>
 
-    <header id="navbar">
-      <div class="nav-inner">
-        <div class="logo">PRELUDE</div>
-        <nav class="nav-links">
-          <a href="#hero">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#case-studies">Case Studies</a>
-          <a href="#showcase">Showcase</a>
-          <a href="#team">Our Team</a>
-          <a href="#career">Career</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section id="hero" class="hero-section">
+    <!-- MAIN LAYOUT: SIDEBAR FILTERS + PRODUCT GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
       
-      <!-- Content -->
-      <div class="hero-content">
-        <h1 class="hero-title">
-          <span class="serif">We Shape</span><br>
-          <span class="serif highlight">Your Brand</span>
-        </h1>
-      </div>
-    </section>
-    
-    
-    
+      <!-- DESKTOP LEFT FILTER SIDEBAR -->
+      <aside class="hidden lg:block lg:col-span-1 space-y-6">
+        <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-2xs sticky top-36">
+          
+          <div class="flex items-center justify-between pb-3 border-b border-stone-100 mb-4">
+            <h3 class="font-serif font-bold text-stone-900 text-base">Filter Collection</h3>
+            <button id="clearFiltersBtn" class="text-xs text-amber-800 hover:text-amber-950 font-bold uppercase tracking-wider">
+              Reset All
+            </button>
+          </div>
 
-    <!-- ABOUT / PRELUDE -->
-    <section id="about" class="about section card-snap fade-in">
-      <div class="about-inner">
-        <h2 class="about-title">
-          Prelude: Cultivating Success Through Strategic Communication (Since
-          1996)
-        </h2>
-        <div class="divider"></div>
-        <p class="lead">
-          A symphony of communication solutions since 1996 — Your tailored
-          communication partner since 1996.
-        </p>
-        <p>
-          With over 27 years of experience, Prelude is a leader in crafting
-          unforgettable events. We transform client visions into reality,
-          ensuring seamless execution and a lasting impression for every
-          occasion.
-        </p>
-        <h3>Unwavering Innovation at Prelude</h3>
-        <p>
-          Prelude stays ahead of the curve by incorporating the latest trends
-          and innovations. Our creative team constantly pushes boundaries,
-          delivering fresh and imaginative concepts that resonate with your
-          target audience.
-        </p>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section fade-in">
-      <div class="container">
-        <h2>Our Services</h2>
-        <div class="grid services-grid">
-          <article class="service">
-            <h4>Advertising Campaign</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              sodales nunc ut velit tincidunt, at condimentum lectus feugiat.
-            </p>
-          </article>
-          <article class="service">
-            <h4>Events</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              sodales nunc ut velit tincidunt, at condimentum lectus feugiat.
-            </p>
-          </article>
-          <article class="service">
-            <h4>Brand Strategy</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              sodales nunc ut velit tincidunt, at condimentum lectus feugiat.
-            </p>
-          </article>
-          <article class="service">
-            <h4>Digital Marketing</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              sodales nunc ut velit tincidunt, at condimentum lectus feugiat.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASE STUDIES (carousel) -->
-    <section id="case-studies" class="section fade-in">
-      <div class="container">
-        <h2>Case Studies</h2>
-        <div class="carousel-wrap">
-          <button class="carousel-btn left" data-target="case">‹</button>
-          <div class="carousel" id="case-track">
-            <div class="card sample">
-              <div class="thumb">Project A</div>
-              <h4>Brand Launch</h4>
-              <p>Integrated launch with 360° comms.</p>
-            </div>
-            <div class="card sample">
-              <div class="thumb">Project B</div>
-              <h4>Festival Activation</h4>
-              <p>On-ground experience for 50k visitors.</p>
-            </div>
-            <div class="card sample">
-              <div class="thumb">Project C</div>
-              <h4>Corporate Summit</h4>
-              <p>High-profile speaker curation and staging.</p>
+          <!-- 1. CATEGORY -->
+          <div class="mb-5">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-500 mb-2.5">Category</h4>
+            <div class="space-y-2">
+              <label class="flex items-center gap-2.5 text-xs text-stone-700 font-medium cursor-pointer hover:text-stone-900">
+                <input type="radio" name="categoryFilter" value="all" checked class="text-stone-900 focus:ring-stone-900">
+                <span>All Styles (Sarees & 3-Piece Suits)</span>
+              </label>
+              <label class="flex items-center gap-2.5 text-xs text-stone-700 font-medium cursor-pointer hover:text-stone-900">
+                <input type="radio" name="categoryFilter" value="saree" class="text-stone-900 focus:ring-stone-900">
+                <span>🥻 Sarees Only</span>
+              </label>
+              <label class="flex items-center gap-2.5 text-xs text-stone-700 font-medium cursor-pointer hover:text-stone-900">
+                <input type="radio" name="categoryFilter" value="suit" class="text-stone-900 focus:ring-stone-900">
+                <span>👗 Three-Piece Suits Only</span>
+              </label>
             </div>
           </div>
-          <button class="carousel-btn right" data-target="case">›</button>
+
+          <!-- 2. SUBCATEGORY (Saree Weaves & Suit Styles) -->
+          <div class="mb-5 border-t border-stone-100 pt-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-500 mb-2.5">Style / Weave</h4>
+            <div class="space-y-2 max-h-44 overflow-y-auto pr-1">
+              <label class="flex items-center gap-2 text-xs text-stone-700 cursor-pointer">
+                <input type="checkbox" value="kanjivaram" class="subcat-filter rounded text-stone-900">
+                <span>Kanjivaram Silk Sarees</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs text-stone-700 cursor-pointer">
+                <input type="checkbox" value="banarasi" class="subcat-filter rounded text-stone-900">
+                <span>Banarasi Brocade Sarees</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs text-stone-700 cursor-pointer">
+                <input type="checkbox" value="organza" class="subcat-filter rounded text-stone-900">
+                <span>Floral Organza & Chiffon</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs text-stone-700 cursor-pointer">
+                <input type="checkbox" value="pakistani-suit" class="subcat-filter rounded text-stone-900">
+                <span>Pakistani Luxury 3-Piece Suits</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs text-stone-700 cursor-pointer">
+                <input type="checkbox" value="anarkali" class="subcat-filter rounded text-stone-900">
+                <span>Flared Grand Anarkali Sets</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs text-stone-700 cursor-pointer">
+                <input type="checkbox" value="sharara-suit" class="subcat-filter rounded text-stone-900">
+                <span>Mirror Work Sharara Sets</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs text-stone-700 cursor-pointer">
+                <input type="checkbox" value="straight-suit" class="subcat-filter rounded text-stone-900">
+                <span>Straight Cut Silk & Cotton Suits</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 3. FABRIC SELECTOR -->
+          <div class="mb-5 border-t border-stone-100 pt-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-500 mb-2">Fabric</h4>
+            <select id="fabricFilter" class="w-full bg-stone-50 border border-stone-200 text-xs text-stone-800 rounded-lg p-2 focus:outline-none focus:border-amber-700">
+              <option value="all">All Luxury Fabrics</option>
+              <option value="silk">Pure Mulberry & Katan Silk</option>
+              <option value="georgette">Khaddi Georgette</option>
+              <option value="organza">Sheer Organza</option>
+              <option value="lawn">Swiss Embroidered Lawn</option>
+              <option value="chiffon">French Chiffon</option>
+              <option value="velvet">Micro Velvet 9000</option>
+              <option value="cotton">Pure Cambric Cotton</option>
+              <option value="chanderi">Chanderi Silk-Cotton</option>
+            </select>
+          </div>
+
+          <!-- 4. OCCASION -->
+          <div class="mb-5 border-t border-stone-100 pt-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-500 mb-2">Occasion</h4>
+            <select id="occasionFilter" class="w-full bg-stone-50 border border-stone-200 text-xs text-stone-800 rounded-lg p-2 focus:outline-none focus:border-amber-700">
+              <option value="all">All Occasions</option>
+              <option value="Bridal & Wedding">Bridal & Wedding</option>
+              <option value="Festive Celebration">Festive Celebration (Diwali/Eid/Haldi)</option>
+              <option value="Party Wear">Cocktail & Party Wear</option>
+              <option value="Casual Luxury">Casual & Daily Luxe</option>
+            </select>
+          </div>
+
+          <!-- 5. PRICE RANGE SLIDER -->
+          <div class="mb-5 border-t border-stone-100 pt-4">
+            <div class="flex items-center justify-between mb-1.5">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-stone-500">Max Budget</h4>
+              <span id="priceRangeDisplay" class="text-xs font-extrabold text-stone-900 font-sans">₹25,000</span>
+            </div>
+            <input 
+              type="range" 
+              id="priceRangeSlider" 
+              min="2000" 
+              max="25000" 
+              step="500" 
+              value="25000" 
+              class="w-full accent-stone-900 cursor-pointer"
+            >
+          </div>
+
+          <!-- 6. READY TO SHIP CHECKBOX -->
+          <div class="border-t border-stone-100 pt-4">
+            <label class="flex items-center gap-2 text-xs text-stone-800 font-medium cursor-pointer">
+              <input type="checkbox" id="readyToShipOnly" class="rounded text-emerald-700 focus:ring-emerald-700">
+              <span>⚡ Ready to Ship Only (Dispatches in 24h)</span>
+            </label>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- PRODUCT GRID (Directly visible, responsive 2 to 3 columns) -->
+      <div class="lg:col-span-3">
+        <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-3.5 sm:gap-5">
+          <!-- Populated dynamically by app.js -->
         </div>
       </div>
-    </section>
 
-    <!-- SHOWCASE (carousel) -->
-    <section id="showcase" class="section card-snap fade-in">
-      <div class="container">
-        <h2>Showcase</h2>
-        <div class="carousel-wrap">
-          <button class="carousel-btn left" data-target="show">‹</button>
-          <div class="carousel" id="show-track">
-            <div class="logo-card"><div class="logo-box">Client 1</div></div>
-            <div class="logo-card"><div class="logo-box">Client 2</div></div>
-            <div class="logo-card"><div class="logo-box">Client 3</div></div>
-            <div class="logo-card"><div class="logo-box">Client 4</div></div>
+    </div>
+  </main>
+
+  <!-- ================= WORLDWIDE TRUST & SERVICE GUARANTEES ================= -->
+  <section class="bg-white border-y border-stone-200 py-12 px-4 sm:px-6 my-8">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-amber-800 text-xs font-bold uppercase tracking-widest">Global Couture Excellence</span>
+        <h2 class="text-2xl font-serif font-bold text-stone-900 mt-1">Why Worldwide Clients Choose Us</h2>
+        <p class="text-xs text-stone-500 mt-1">Delivering authentic Indian craftsmanship to brides and fashion lovers across the globe.</p>
+      </div>
+
+      <div id="trustBadgesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERNATIONAL CLIENT REVIEWS ================= -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="text-center max-w-xl mx-auto mb-8">
+      <span class="text-amber-800 text-xs font-bold uppercase tracking-widest">Verified Customer Testimonials</span>
+      <h2 class="text-2xl font-serif font-bold text-stone-900 mt-1">Loved Across 80+ Countries</h2>
+      <p class="text-xs text-stone-500 mt-1">Real feedback from clients in USA, UK, Canada, UAE & Australia.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Review 1 -->
+      <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center text-amber-500 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-stone-600 italic leading-relaxed">
+            "I ordered a Kanjivaram silk saree for my brother's wedding in San Jose, California. The WhatsApp team sent me live videos to confirm the color shade. Arrived via DHL in 4 days! The zari work is stunning."
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center text-xs">
+            AP
           </div>
-          <button class="carousel-btn right" data-target="show">›</button>
+          <div>
+            <h4 class="text-xs font-serif font-bold text-stone-900">Ananya Patel</h4>
+            <p class="text-[11px] text-stone-400">San Jose, California, USA 🇺🇸</p>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- TEAM -->
-    <section id="team" class="section fade-in">
-      <div class="container">
-        <h2>Our Team</h2>
-        <div class="team-grid">
-          <div class="member">
-            <div class="photo"></div>
-            <h4>Alex Mercer</h4>
-            <p class="role">Creative Director</p>
+      <!-- Review 2 -->
+      <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center text-amber-500 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-stone-600 italic leading-relaxed">
+            "Ordered two Pakistani 3-piece designer suits. Stitched to perfection according to the bust & length measurements I gave on WhatsApp. The fabric quality and organza embroidery are luxurious."
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-900 font-bold flex items-center justify-center text-xs">
+            SK
           </div>
-          <div class="member">
-            <div class="photo"></div>
-            <h4>Sophia Lee</h4>
-            <p class="role">Head of Events</p>
-          </div>
-          <div class="member">
-            <div class="photo"></div>
-            <h4>Rahul Das</h4>
-            <p class="role">Strategy Lead</p>
-          </div>
-          <div class="member">
-            <div class="photo"></div>
-            <h4>Priya Nair</h4>
-            <p class="role">Production Manager</p>
+          <div>
+            <h4 class="text-xs font-serif font-bold text-stone-900">Simran Kaur</h4>
+            <p class="text-[11px] text-stone-400">London, United Kingdom 🇬🇧</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- CAREER -->
-    <section id="career" class="section career-section fade-in">
-      <div class="container">
-        <h2>Careers</h2>
-        <div class="career-grid">
-          <div class="career-card">
-            <h4>Social Media Intern</h4>
-            <p>
-              Support content creation & community management. Internship role.
+      <!-- Review 3 -->
+      <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center text-amber-500 text-xs mb-2">★★★★★</div>
+          <p class="text-xs text-stone-600 italic leading-relaxed">
+            "Direct WhatsApp ordering with admin +91 8140307529 was the smoothest experience ever! Paid via PayPal and received my parcel in Dubai in 3 days. Highly recommend to everyone abroad."
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-purple-100 text-purple-900 font-bold flex items-center justify-center text-xs">
+            FA
+          </div>
+          <div>
+            <h4 class="text-xs font-serif font-bold text-stone-900">Fatima Al-Zahra</h4>
+            <p class="text-[11px] text-stone-400">Downtown Dubai, UAE 🇦🇪</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FREQUENTLY ASKED QUESTIONS ================= -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <div class="text-center mb-6">
+      <span class="text-amber-800 text-xs font-bold uppercase tracking-widest">Help & Information</span>
+      <h2 class="text-2xl font-serif font-bold text-stone-900 mt-1">Frequently Asked Questions</h2>
+    </div>
+
+    <div id="faqContainer" class="space-y-3">
+      <!-- FAQ accordion populated dynamically -->
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-stone-950 text-stone-400 pt-12 pb-8 border-t border-amber-950/40 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-stone-800">
+        
+        <!-- Brand Info -->
+        <div class="space-y-3">
+          <h3 class="font-serif text-xl font-bold text-white tracking-wider flex items-center">
+            IKSHARA<sup class="text-xs text-amber-400 font-sans ml-0.5">TM</sup>
+          </h3>
+          <p class="text-stone-400 leading-relaxed text-xs">
+            Curators of pure handloom sarees and designer three-piece suits for discerning clients across New Zealand, Australia, and worldwide at <a href="https://ikshara.co.nz" class="text-amber-300 hover:underline">ikshara.co.nz</a>.
+          </p>
+          <div class="pt-2">
+            <p class="text-stone-300 font-bold">Admin WhatsApp Orders:</p>
+            <a href="https://wa.me/918140307529" target="_blank" class="text-emerald-400 font-bold hover:underline">
+              +91 81403 07529
+            </a>
+          </div>
+        </div>
+
+        <!-- Collections Links -->
+        <div>
+          <h4 class="text-stone-200 font-bold uppercase tracking-wider mb-3">Collections</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-amber-300 transition-colors">Pure Kanjivaram Silk Sarees</a></li>
+            <li><a href="#" class="hover:text-amber-300 transition-colors">Heritage Banarasi Sarees</a></li>
+            <li><a href="#" class="hover:text-amber-300 transition-colors">Pakistani Luxury 3-Piece Suits</a></li>
+            <li><a href="#" class="hover:text-amber-300 transition-colors">Embroidered Floor Anarkali Sets</a></li>
+            <li><a href="#" class="hover:text-amber-300 transition-colors">Ready to Ship (24h Dispatch)</a></li>
+          </ul>
+        </div>
+
+        <!-- Worldwide Shipping Info -->
+        <div>
+          <h4 class="text-stone-200 font-bold uppercase tracking-wider mb-3">Global Shipping</h4>
+          <ul class="space-y-2">
+            <li><span>✈️ Express Courier: DHL, FedEx, Aramex</span></li>
+            <li><span>⏱️ Delivery: 4-7 Business Days (NZ/AU Express)</span></li>
+            <li><span>💳 Payment: International Cards, PayPal, Wise, UPI</span></li>
+            <li><span>🧵 Custom Sizing: Blouse & Suit Tailoring</span></li>
+            <li><span>📹 Live Video Call Before Shipping</span></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div>
+          <h4 class="text-stone-200 font-bold uppercase tracking-wider mb-3">Customer Care</h4>
+          <p class="mb-2">Need advice or custom wedding order?</p>
+          <a 
+            href="https://wa.me/918140307529?text=Hello%20Ikshara%E2%84%A2%20(ikshara.co.nz)!%20I%20have%20an%20enquiry%20regarding%20an%20order." 
+            target="_blank" 
+            class="inline-flex items-center gap-2 px-3 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg font-bold text-xs shadow transition-colors">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Chat with Stylist
+          </a>
+          <p class="text-[11px] text-stone-500 mt-3">Available 24/7 on WhatsApp</p>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Admin Link -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-3">
+        <p>© 2026 Ikshara™ (ikshara.co.nz). All Rights Reserved. Pure Sarees & 3-Piece Suits Worldwide.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" id="adminToolFooterLink" class="text-stone-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+            <span>⚙️</span> Store Owner Portal (Add Products)
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MOBILE FILTER DRAWER ================= -->
+  <div id="mobileFilterDrawer" class="hidden fixed inset-0 z-50 flex">
+    <div class="fixed inset-0 bg-black/60 backdrop-blur-xs" id="closeMobileFiltersOverlay"></div>
+    <div class="relative ml-auto w-full max-w-xs bg-white h-full shadow-2xl p-5 overflow-y-auto flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-3 border-b border-stone-200 mb-4">
+          <h3 class="font-serif font-bold text-stone-900 text-lg">Filters</h3>
+          <button id="closeMobileFilters" class="p-1 text-stone-400 hover:text-stone-800">✕</button>
+        </div>
+        <p class="text-xs text-stone-500 mb-4">Use desktop sidebar filters or category chips above for best experience.</p>
+        <button onclick="app.resetFilters(); document.getElementById('mobileFilterDrawer').classList.add('hidden')" class="w-full py-2 bg-stone-900 text-white text-xs font-bold rounded-lg uppercase">
+          Reset All Filters
+        </button>
+      </div>
+      <button onclick="document.getElementById('mobileFilterDrawer').classList.add('hidden')" class="w-full py-2.5 bg-amber-400 text-stone-900 font-bold text-xs rounded-lg uppercase mt-4">
+        Apply & Show Designs
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= SHOPPING BAG DRAWER (SLIDE-OVER) ================= -->
+  <div id="cartDrawerOverlay" class="hidden fixed inset-0 bg-stone-900/60 backdrop-blur-xs z-50 transition-opacity"></div>
+  
+  <div id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+    
+    <!-- Drawer Header -->
+    <div class="p-4 border-b border-stone-200 flex items-center justify-between bg-stone-50">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-stone-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <h3 class="font-serif font-bold text-stone-900 text-base">Your Shopping Bag</h3>
+      </div>
+      <button id="closeCartDrawer" class="p-1.5 rounded-full hover:bg-stone-200 text-stone-500 hover:text-stone-900 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Notice -->
+    <div id="freeShippingProgress" class="px-4 pt-3"></div>
+
+    <!-- Items List -->
+    <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 divide-y divide-stone-100">
+      <!-- Populated dynamically -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="p-4 border-t border-stone-200 bg-stone-50 space-y-3">
+      <div class="flex justify-between items-center text-sm">
+        <span class="font-medium text-stone-600">Subtotal:</span>
+        <span id="cartSubtotal" class="font-bold text-stone-900 text-lg font-sans">₹0</span>
+      </div>
+
+      <p class="text-[11px] text-stone-500 text-center">
+        ✈️ Worldwide Express Delivery via DHL/FedEx • Orders proceed via WhatsApp
+      </p>
+
+      <!-- Proceed to WhatsApp Button -->
+      <button 
+        id="cartWhatsAppCheckoutBtn"
+        class="w-full py-3 px-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all disabled:opacity-50">
+        <svg class="w-5 h-5 fill-current text-white flex-shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <span>Proceed to WhatsApp Order</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ================= WHATSAPP ORDER / CHECKOUT MODAL (+91 8140307529) ================= -->
+  <div id="checkoutModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/70 backdrop-blur-xs">
+    <div class="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-stone-200 overflow-hidden flex flex-col max-h-[92vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-4 bg-gradient-to-r from-emerald-800 to-stone-900 text-white flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+            <svg class="w-4 h-4 fill-current text-emerald-400" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-sm sm:text-base leading-tight">Order via WhatsApp Admin</h3>
+            <p class="text-[10px] text-emerald-300">Direct enquiry sent to: <span id="checkoutAdminNumber">+91 81403 07529</span></p>
+          </div>
+        </div>
+        <button id="closeCheckoutModal" class="text-stone-300 hover:text-white p-1 rounded-lg">✕</button>
+      </div>
+
+      <!-- Modal Body (Form & Order Summary) -->
+      <div class="p-4 sm:p-5 overflow-y-auto space-y-4">
+        
+        <!-- Order Items Summary Box -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">Order Items Preview:</label>
+          <div id="checkoutItemsPreview" class="space-y-2 max-h-36 overflow-y-auto pr-1"></div>
+        </div>
+
+        <div class="flex items-center justify-between p-2.5 bg-amber-50 rounded-xl border border-amber-200 text-xs">
+          <span class="font-semibold text-stone-700">Estimated Total:</span>
+          <span id="checkoutTotalDisplay" class="font-extrabold text-amber-950 text-sm font-sans">₹0</span>
+        </div>
+
+        <!-- Customer Details Form -->
+        <form id="checkoutForm" class="space-y-3">
+          
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">Your Full Name *</label>
+            <input 
+              type="text" 
+              id="checkoutName" 
+              required 
+              placeholder="e.g. Priya Sharma" 
+              class="w-full text-xs p-2.5 rounded-lg border border-stone-300 bg-stone-50 focus:bg-white"
+            >
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">WhatsApp / Phone Number *</label>
+              <input 
+                type="tel" 
+                id="checkoutPhone" 
+                required 
+                placeholder="e.g. +1 415-890-1234" 
+                class="w-full text-xs p-2.5 rounded-lg border border-stone-300 bg-stone-50 focus:bg-white"
+              >
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">Destination Country *</label>
+              <select id="checkoutCountry" class="w-full text-xs p-2.5 rounded-lg border border-stone-300 bg-stone-50 focus:bg-white cursor-pointer">
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">Complete Delivery Address & Zip/Postal Code *</label>
+            <textarea 
+              id="checkoutAddress" 
+              rows="2" 
+              required 
+              placeholder="Street address, Apartment/Suite, City, State, Postal/Zip code" 
+              class="w-full text-xs p-2.5 rounded-lg border border-stone-300 bg-stone-50 focus:bg-white"
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">Custom Stitching / Measurements / Special Requests (Optional)</label>
+            <textarea 
+              id="checkoutNotes" 
+              rows="2" 
+              placeholder="e.g. Blouse bust 38 inches, need stitched before 20th Oct, please send video call preview." 
+              class="w-full text-xs p-2.5 rounded-lg border border-stone-300 bg-stone-50 focus:bg-white"
+            ></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button 
+              type="submit" 
+              class="w-full py-3 px-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all">
+              <svg class="w-5 h-5 fill-current text-white flex-shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span>Confirm & Send Order to WhatsApp</span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= ORDER SUCCESS OVERLAY / FALLBACK MODAL ================= -->
+  <div id="orderSuccessModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
+    <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl text-center border border-stone-200">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto text-3xl mb-3">
+        ✓
+      </div>
+      <h3 class="font-serif font-bold text-xl text-stone-900">Enquiry Forwarded!</h3>
+      <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+        Your order details have been forwarded to our WhatsApp sales desk (<strong class="text-emerald-800">+91 81403 07529</strong>).
+      </p>
+      <div class="mt-4 p-3 bg-stone-50 rounded-xl border border-stone-200 text-[11px] text-stone-600 text-left space-y-1">
+        <p>• Our stylist will confirm stock and provide payment links (Card, PayPal, Wise, UPI).</p>
+        <p>• Video call preview can be scheduled before dispatch.</p>
+      </div>
+
+      <div class="mt-5 flex flex-col gap-2">
+        <a id="successWhatsAppBtn" href="#" target="_blank" class="w-full py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-xl shadow transition-colors flex items-center justify-center gap-2">
+          <span>Open WhatsApp Chat Again</span>
+        </a>
+        <button id="successCopyBtn" class="w-full py-2 bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-semibold rounded-xl transition-colors">
+          📋 Copy Order Text to Clipboard
+        </button>
+        <button id="closeSuccessModal" class="w-full py-2 text-stone-500 hover:text-stone-800 text-xs font-semibold mt-1">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div id="quickViewModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/70 backdrop-blur-xs">
+    <div class="relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl border border-stone-200 overflow-hidden max-h-[92vh] flex flex-col">
+      <div class="p-3.5 border-b border-stone-200 flex justify-between items-center bg-stone-50">
+        <span class="text-xs font-bold uppercase tracking-wider text-stone-500">Design Overview</span>
+        <button id="closeQuickViewModal" class="p-1 rounded-md hover:bg-stone-200 text-stone-500 hover:text-stone-900">✕</button>
+      </div>
+      <div id="quickViewContent" class="p-4 sm:p-6 overflow-y-auto">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= WISHLIST MODAL ================= -->
+  <div id="wishlistModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/70 backdrop-blur-xs">
+    <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-stone-200 overflow-hidden max-h-[90vh] flex flex-col">
+      <div class="p-4 border-b border-stone-200 flex justify-between items-center bg-stone-50">
+        <h3 class="font-serif font-bold text-stone-900 text-base flex items-center gap-2">
+          <span>❤️</span> Saved Favorites & Wishlist
+        </h3>
+        <button id="closeWishlistModal" class="p-1 rounded-md hover:bg-stone-200 text-stone-500 hover:text-stone-900">✕</button>
+      </div>
+      <div id="wishlistItemsContainer" class="p-4 sm:p-5 overflow-y-auto">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SIZING & CUSTOM FIT MODAL ================= -->
+  <div id="sizeGuideModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/70 backdrop-blur-xs">
+    <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-stone-200 overflow-hidden max-h-[90vh] flex flex-col">
+      <div class="p-4 border-b border-stone-200 flex justify-between items-center bg-stone-50">
+        <h3 class="font-serif font-bold text-stone-900 text-base">Worldwide Sizing & Custom Stitching Chart</h3>
+        <button id="closeSizeGuideModal" class="p-1 rounded-md hover:bg-stone-200 text-stone-500 hover:text-stone-900">✕</button>
+      </div>
+      <div class="p-5 overflow-y-auto space-y-5 text-xs text-stone-700">
+        
+        <div>
+          <h4 class="font-serif font-bold text-sm text-stone-900 mb-1.5">🥻 Saree Specifications & Blouse Tailoring</h4>
+          <p class="text-stone-600 leading-relaxed mb-2">
+            Every saree comes with <strong>5.5 Metres</strong> standard drape length and <strong>0.8 Metres</strong> matching unstitched blouse fabric.
+          </p>
+          <div class="bg-amber-50 p-3 rounded-xl border border-amber-200">
+            <p class="font-bold text-stone-900">Custom Blouse Tailoring (+₹999 / $15 USD):</p>
+            <p class="text-[11px] text-stone-600 mt-1">
+              Includes pre-washed lining, high-grade cup padding, designer neck cut, and saree fall-pico edging. Simply provide Bust, Waist, and Blouse Length measurements on WhatsApp.
             </p>
           </div>
-          <div class="career-card">
-            <h4>Designer</h4>
-            <p>Visual design, motion and deliverables for campaigns.</p>
-          </div>
-          <div class="career-card">
-            <h4>Account Executive</h4>
-            <p>Client servicing and project coordination.</p>
+        </div>
+
+        <div>
+          <h4 class="font-serif font-bold text-sm text-stone-900 mb-2">👗 Three-Piece Suit Standard Sizing Chart (Inches)</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-stone-200 text-center">
+              <thead class="bg-stone-100 font-bold text-stone-800">
+                <tr>
+                  <th class="border border-stone-200 p-2">Size</th>
+                  <th class="border border-stone-200 p-2">Bust (in)</th>
+                  <th class="border border-stone-200 p-2">Waist (in)</th>
+                  <th class="border border-stone-200 p-2">Hip (in)</th>
+                  <th class="border border-stone-200 p-2">Kurta Length (in)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="border p-1.5 font-semibold">S (36)</td><td class="border p-1.5">36"</td><td class="border p-1.5">32"</td><td class="border p-1.5">38"</td><td class="border p-1.5">44"-46"</td></tr>
+                <tr class="bg-stone-50"><td class="border p-1.5 font-semibold">M (38)</td><td class="border p-1.5">38"</td><td class="border p-1.5">34"</td><td class="border p-1.5">40"</td><td class="border p-1.5">44"-46"</td></tr>
+                <tr><td class="border p-1.5 font-semibold">L (40)</td><td class="border p-1.5">40"</td><td class="border p-1.5">36"</td><td class="border p-1.5">42"</td><td class="border p-1.5">44"-46"</td></tr>
+                <tr class="bg-stone-50"><td class="border p-1.5 font-semibold">XL (42)</td><td class="border p-1.5">42"</td><td class="border p-1.5">38"</td><td class="border p-1.5">44"</td><td class="border p-1.5">45"-46"</td></tr>
+                <tr><td class="border p-1.5 font-semibold">XXL (44)</td><td class="border p-1.5">44"</td><td class="border p-1.5">40"</td><td class="border p-1.5">46"</td><td class="border p-1.5">45"-46"</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section fade-in">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Email: contact@prelude.com | Phone: +91 9876543210</p>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <footer class="footer">
-      <div class="container">
-        © 2025 Prelude Communications. All rights reserved.
+  <!-- ================= STORE OWNER / ADMIN PRODUCT HELPER MODAL ================= -->
+  <div id="adminProductModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
+    <div class="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-stone-200 overflow-hidden max-h-[92vh] flex flex-col">
+      <div class="p-4 bg-stone-900 text-white flex justify-between items-center">
+        <div>
+          <h3 class="font-serif font-bold text-base">Store Owner Assistant</h3>
+          <p class="text-[10px] text-stone-400">Quickly add new Sarees & 3-Piece Suits to your catalog</p>
+        </div>
+        <button onclick="adminTool.close()" class="text-stone-300 hover:text-white p-1">✕</button>
       </div>
-    </footer>
+      <div class="p-5 overflow-y-auto space-y-3 text-xs">
+        <div>
+          <label class="block font-bold text-stone-700 mb-1">Product Title</label>
+          <input type="text" id="adminTitle" value="Handcrafted Tussar Silk Saree with Temple Border" class="w-full p-2 border border-stone-300 rounded-lg">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Category</label>
+            <select id="adminCategory" class="w-full p-2 border border-stone-300 rounded-lg">
+              <option value="saree">Saree</option>
+              <option value="suit">Three-Piece Suit</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Subcategory</label>
+            <select id="adminSubcategory" class="w-full p-2 border border-stone-300 rounded-lg">
+              <option value="kanjivaram">Kanjivaram</option>
+              <option value="banarasi">Banarasi</option>
+              <option value="organza">Organza</option>
+              <option value="pakistani-suit">Pakistani Suit</option>
+              <option value="anarkali">Anarkali</option>
+              <option value="sharara-suit">Sharara</option>
+              <option value="straight-suit">Straight Suit</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Fabric</label>
+            <input type="text" id="adminFabric" value="Pure Tussar Silk" class="w-full p-2 border border-stone-300 rounded-lg">
+          </div>
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Work / Craft</label>
+            <input type="text" id="adminWork" value="Gold Zari Handloom Weave" class="w-full p-2 border border-stone-300 rounded-lg">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Selling Price (INR)</label>
+            <input type="number" id="adminPrice" value="7999" class="w-full p-2 border border-stone-300 rounded-lg">
+          </div>
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Original MRP (INR)</label>
+            <input type="number" id="adminMRP" value="12999" class="w-full p-2 border border-stone-300 rounded-lg">
+          </div>
+        </div>
+        <div>
+          <label class="block font-bold text-stone-700 mb-1">Image URL (Primary)</label>
+          <input type="url" id="adminImage1" value="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80" class="w-full p-2 border border-stone-300 rounded-lg">
+        </div>
+        <div>
+          <label class="block font-bold text-stone-700 mb-1">Image URL (Secondary / Detail Hover)</label>
+          <input type="url" id="adminImage2" value="https://images.unsplash.com/photo-1627483262268-9c2b5b2834b5?auto=format&fit=crop&w=900&q=80" class="w-full p-2 border border-stone-300 rounded-lg">
+        </div>
+        <div>
+          <label class="block font-bold text-stone-700 mb-1">Short Description</label>
+          <textarea id="adminDesc" rows="2" class="w-full p-2 border border-stone-300 rounded-lg">Handcrafted pure fabric adorned with rich zari work for celebratory events.</textarea>
+        </div>
 
-    <script src="script.js"></script>
-  </body>
+        <div class="pt-3 flex gap-2">
+          <button onclick="adminTool.addLive()" class="flex-1 py-2.5 bg-stone-900 text-white font-bold rounded-lg hover:bg-stone-800">
+            Preview on Screen Now
+          </button>
+          <button onclick="adminTool.copyJSON()" class="flex-1 py-2.5 bg-amber-500 text-stone-900 font-bold rounded-lg hover:bg-amber-400">
+            📋 Copy JSON Code
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON (ADMIN: 8140307529) ================= -->
+  <aside aria-label="WhatsApp Contact" class="fixed bottom-20 md:bottom-6 right-5 z-40 flex items-center gap-2 group">
+    <div class="hidden sm:block bg-stone-900/90 text-white text-xs px-3 py-1.5 rounded-full shadow-lg border border-amber-400/30 opacity-0 group-hover:opacity-100 transition-opacity">
+      💬 Chat with Admin (+91 81403 07529)
+    </div>
+    <a 
+      id="floatingWhatsAppBtn"
+      href="https://wa.me/918140307529?text=Hello%20Ikshara%E2%84%A2%20(ikshara.co.nz)!%20I%20am%20interested%20in%20ordering%20Sarees%20and%20Suits." 
+      target="_blank" 
+      class="wa-pulse-btn w-13 h-13 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95"
+      title="Chat directly on WhatsApp: 8140307529">
+      <svg class="w-7 h-7 fill-current text-white" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+  </aside>
+
+  <!-- ================= MOBILE APP-LIKE BOTTOM NAV ================= -->
+  <nav class="mobile-bottom-nav">
+    <a href="#" class="flex flex-col items-center justify-center text-stone-900">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      <span class="text-[10px] font-semibold mt-0.5">Home</span>
+    </a>
+    <a href="#productsSection" class="flex flex-col items-center justify-center text-stone-600 hover:text-stone-900">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+      <span class="text-[10px] font-semibold mt-0.5">Shop</span>
+    </a>
+    <button id="mobileWishlistButton" class="relative flex flex-col items-center justify-center text-stone-600 hover:text-stone-900">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+      <span id="mobileWishlistBadge" class="hidden absolute top-0 right-3 w-3.5 h-3.5 rounded-full bg-red-600 text-white text-[9px] font-bold flex items-center justify-center">0</span>
+      <span class="text-[10px] font-semibold mt-0.5">Wishlist</span>
+    </button>
+    <button id="mobileCartButton" class="relative flex flex-col items-center justify-center text-stone-600 hover:text-stone-900">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+      <span id="mobileCartBadge" class="hidden absolute top-0 right-3 w-3.5 h-3.5 rounded-full bg-stone-900 text-amber-300 text-[9px] font-bold flex items-center justify-center">0</span>
+      <span class="text-[10px] font-semibold mt-0.5">Bag</span>
+    </button>
+    <a href="https://wa.me/918140307529?text=Hello%20Ikshara%E2%84%A2%20(ikshara.co.nz)!%20I%20am%20visiting%20your%20website%20from%20mobile." target="_blank" class="flex flex-col items-center justify-center text-emerald-700">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      <span class="text-[10px] font-semibold mt-0.5">WhatsApp</span>
+    </a>
+  </nav>
+
+  <!-- ================= TOAST NOTIFICATION CONTAINER ================= -->
+  <div 
+    id="toastNotification" 
+    class="fixed bottom-24 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 bg-stone-900 text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 border border-amber-400/30 opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
+    <span class="text-amber-300">✨</span>
+    <span id="toastMessage">Item added</span>
+  </div>
+
+  <!-- APPLICATION JAVASCRIPT FILES -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
 </html>
